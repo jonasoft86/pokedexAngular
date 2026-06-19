@@ -11,7 +11,8 @@
     "dev": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --no-watch",
+    "test:watch": "ng test"
   },
   "dependencies": {
     "@angular/common": "^22.0.2",
@@ -28,7 +29,9 @@
     "@angular/build": "^22.0.3",
     "@angular/cli": "^22.0.3",
     "@angular/compiler-cli": "^22.0.2",
+    "jsdom": "^26.1.0",
     "sass": "^1.97.3",
-    "typescript": "~6.0.2"
+    "typescript": "~6.0.2",
+    "vitest": "^4.0.8"
   }
 }

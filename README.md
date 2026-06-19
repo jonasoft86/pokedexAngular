@@ -36,6 +36,25 @@ La aplicación estará disponible normalmente en `http://localhost:4200`.
 - NgRx SignalStore
 - TypeScript, RxJS y Sass
 
+## ¿Por qué Signals + SignalStore?
+
+Angular Signals se usa para el estado reactivo local y derivado porque se
+integra directamente con la detección de cambios zoneless de Angular 22. La
+plantilla lee signals y Angular actualiza únicamente sus consumidores, sin
+suscripciones manuales para el estado síncrono.
+
+NgRx SignalStore aporta una estructura predecible al estado compartido:
+
+- `withState` define una única fuente de verdad.
+- `withComputed` deriva filtros, páginas y contadores sin duplicar datos.
+- `withMethods` agrupa las acciones que modifican el estado.
+- `rxMethod` conecta RxJS y las peticiones HTTP con estados de carga, éxito y
+  error.
+
+Esta combinación mantiene los componentes enfocados en presentación, evita
+propagar estado por varios niveles y conserva RxJS donde aporta más valor:
+operaciones asíncronas, cancelación y composición de llamadas a PokéAPI.
+
 ## Scripts
 
 | Comando | Descripción |
@@ -43,7 +62,21 @@ La aplicación estará disponible normalmente en `http://localhost:4200`.
 | `npm start` | Servidor de desarrollo |
 | `npm run build` | Build de producción |
 | `npm run watch` | Compilación automática |
-| `npm test` | Pruebas configuradas |
+| `npm test` | Ejecuta una vez los tests con Vitest |
+| `npm run test:watch` | Ejecuta los tests en modo observación |
+
+## Tests
+
+La suite usa Vitest, el runner predeterminado de Angular 22, y cubre:
+
+- Helpers puros y transformación de datos.
+- Requests del servicio mediante `HttpTestingController`.
+- Carga, filtrado, orden, favoritos y paginación del SignalStore.
+
+```bash
+npm test
+npm run test:watch
+```
 
 ---
 
