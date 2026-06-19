@@ -242,3 +242,13 @@ npm run preview
 
 Los datos e imágenes pertenecen a sus respectivos propietarios y son
 proporcionados por [PokéAPI](https://pokeapi.co/).
+
+## Comparativa Angular vs Vue
+
+Este proyecto es una reimplementación en Angular del repositorio
+[jonasoft86/pokePrueba4](https://github.com/jonasoft86/pokePrueba4).
+
+- **Angular:** Angular 22, componentes standalone, Angular Signals y NgRx SignalStore.
+- **Vue:** Vue 3, Composition API, Pinia, Vue Router, TanStack Query, Axios, TypeScript, Vite y Sass.
+
+![Cuadro comparativo: Angular vs Vue](./docs/comparativa-angular-vue.png)
