@@ -1,4 +1,53 @@
-# Pokédex Vue
+# Pokédex Angular
+
+Aplicación responsive para explorar Pokémon con datos reales de
+[PokéAPI](https://pokeapi.co/), desarrollada con Angular 22, componentes
+standalone, signals y NgRx SignalStore.
+
+> La documentación detallada y actualizada está disponible en
+> [README.angular.md](./README.angular.md).
+
+## Inicio rápido
+
+Requiere Node.js `22.22.3` o superior.
+
+```bash
+nvm install
+nvm use
+npm install
+npm start
+```
+
+La aplicación estará disponible normalmente en `http://localhost:4200`.
+
+## Funcionalidades
+
+- Búsqueda, filtros, orden y paginación.
+- Detalle con estadísticas, evoluciones, movimientos y ubicaciones.
+- Página `/favoritos` vinculada con el home.
+- Favoritos, Pokémon vistos y tema persistidos en `localStorage`.
+- Modo oscuro y diseño responsive.
+
+## Stack
+
+- Angular 22
+- Angular Router y HttpClient
+- Angular Signals
+- NgRx SignalStore
+- TypeScript, RxJS y Sass
+
+## Scripts
+
+| Comando | Descripción |
+| --- | --- |
+| `npm start` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run watch` | Compilación automática |
+| `npm test` | Pruebas configuradas |
+
+---
+
+## Documentación anterior
 
 Aplicación web responsive para explorar Pokémon mediante datos obtenidos desde
 [PokéAPI](https://pokeapi.co/). Permite consultar información detallada, filtrar
