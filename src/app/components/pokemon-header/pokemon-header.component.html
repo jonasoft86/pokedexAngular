@@ -1,0 +1,39 @@
+<header class="topbar">
+  <div class="brand">
+    <span class="pokeball"><span></span></span>
+    <span>POKÉDEX</span>
+  </div>
+
+  <label class="search-box">
+    <input
+      type="search"
+      placeholder="Buscar Pokémon..."
+      aria-label="Buscar Pokémon"
+      autocomplete="off"
+      [value]="store.search()"
+      (input)="onSearch($event)"
+    >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" />
+      <path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </label>
+
+  <div class="theme-control">
+    <a class="likes-link" routerLink="/favoritos">
+      <span>♡ Favoritos</span>
+      <strong>{{ store.favoriteCount() }}</strong>
+    </a>
+    <span aria-hidden="true">{{ store.darkMode() ? '☾' : '☀' }}</span>
+    <button
+      class="theme-switch"
+      [class.active]="store.darkMode()"
+      type="button"
+      aria-label="Cambiar tema"
+      (click)="store.toggleTheme()"
+    >
+      <span></span>
+    </button>
+    <strong>{{ store.darkMode() ? 'Claro' : 'Oscuro' }}</strong>
+  </div>
+</header>

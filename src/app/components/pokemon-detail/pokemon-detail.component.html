@@ -1,0 +1,135 @@
+<section class="detail-column">
+  @if (store.loadingDetail() && !store.selected()) {
+    <div class="detail-loading"><span class="loader"></span>Cargando detalle...</div>
+  } @else if (store.selected(); as detail) {
+    <article
+      [class]="'panel hero-panel halo-' + detail.pokemon.types[0].type.name"
+    >
+      <button
+        class="favorite-button"
+        [class.active]="store.isFavorite()"
+        type="button"
+        [attr.aria-label]="store.isFavorite() ? 'Quitar de favoritos' : 'Añadir a favoritos'"
+        (click)="store.toggleFavorite()"
+      >{{ store.isFavorite() ? '♥' : '♡' }}</button>
+
+      <div class="hero-copy">
+        <span class="pokemon-number">{{ pokemonNumber(detail.pokemon.id) }}</span>
+        <h1>{{ capitalize(detail.pokemon.name) }}</h1>
+        <p>{{ detail.speciesLabel }}</p>
+        <div class="type-row">
+          @for (item of detail.pokemon.types; track item.slot) {
+            <span class="type-badge" [class]="'type-badge type-' + item.type.name">
+              <span aria-hidden="true">{{ typeIcon(item.type.name) }}</span>
+              {{ typeName(item.type.name) }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <div class="artwork-wrap">
+        <span class="artwork-halo"></span>
+        <img [src]="artwork(detail.pokemon)" [alt]="capitalize(detail.pokemon.name)">
+      </div>
+
+      <div class="quick-facts">
+        <div><span>Altura</span><strong>{{ (detail.pokemon.height / 10).toFixed(1) }} m</strong></div>
+        <div><span>Peso</span><strong>{{ (detail.pokemon.weight / 10).toFixed(1) }} kg</strong></div>
+        <div><span>Habilidad</span><strong>{{ ability(detail.pokemon) }}</strong></div>
+        <div><span>Hábitat</span><strong>{{ detail.habitat }}</strong></div>
+      </div>
+    </article>
+
+    <article class="panel stats-panel">
+      <div>
+        <h2>Estadísticas base</h2>
+        <div class="stat-list">
+          @for (stat of detail.pokemon.stats; track stat.stat.name; let index = $index) {
+            <div class="stat-item">
+              <span>{{ statLabels[index] }}</span>
+              <span class="stat-track">
+                <span [class]="'stat-color-' + index" [style.width]="statWidth(stat.base_stat)"></span>
+              </span>
+              <strong>{{ stat.base_stat }}</strong>
+            </div>
+          }
+          <div class="stat-total">
+            <span>Total</span>
+            <strong>{{ statTotal(detail.pokemon) }}</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="radar-chart" aria-label="Gráfico de estadísticas">
+        <svg viewBox="0 0 200 200" role="img">
+          <polygon class="radar-grid" points="100,28 162,64 162,136 100,172 38,136 38,64" />
+          <polygon class="radar-grid" points="100,52 141,76 141,124 100,148 59,124 59,76" />
+          <polygon class="radar-grid" points="100,76 121,88 121,112 100,124 79,112 79,88" />
+          <path class="radar-line" d="M100 28v144M38 64l124 72M162 64 38 136" />
+          <polygon
+            class="radar-value"
+            [attr.points]="radarPoints(stats(detail.pokemon))"
+          />
+        </svg>
+        <span class="radar-label label-hp">PS</span>
+        <span class="radar-label label-attack">Ataque</span>
+        <span class="radar-label label-defense">Defensa</span>
+        <span class="radar-label label-special-defense">Def. Esp.</span>
+        <span class="radar-label label-special-attack">Atq. Esp.</span>
+        <span class="radar-label label-speed">Velocidad</span>
+      </div>
+    </article>
+
+    <article class="panel evolution-panel">
+      <h2>Evoluciones</h2>
+      <div class="evolution-row">
+        @for (evolution of detail.evolutions; track evolution.id; let first = $first) {
+          @if (!first) {
+            <span class="evolution-arrow" aria-hidden="true">→</span>
+          }
+          <article class="evolution-card">
+            <div><img [src]="evolution.sprite" [alt]="evolution.name" loading="lazy"></div>
+            <strong>{{ evolution.name }}</strong>
+            @if (evolution.id === detail.pokemon.id) {
+              <span title="Pokémon seleccionado">◆</span>
+            }
+          </article>
+        }
+      </div>
+    </article>
+
+    <article class="panel info-panel">
+      <section class="moves-column">
+        <h2>Movimientos principales</h2>
+        <div class="moves-list">
+          @for (move of detail.moves; track move.name) {
+            <div class="move-item">
+              <strong>{{ move.name }}</strong>
+              <span class="move-type" [class]="'move-type type-' + move.type">
+                {{ typeIcon(move.type) }} {{ typeName(move.type) }}
+              </span>
+              <small>PP {{ move.pp }}/{{ move.pp }}</small>
+            </div>
+          } @empty {
+            <p class="location-status">Sin movimientos disponibles.</p>
+          }
+        </div>
+        <span class="text-link">Datos obtenidos en tiempo real <span>→</span></span>
+      </section>
+
+      <section class="locations-column">
+        <h2>Ubicaciones</h2>
+        <div class="location-list">
+          @for (location of detail.locations; track location; let index = $index) {
+            <div><span>{{ location }}</span><strong>#{{ index + 1 }}</strong></div>
+          } @empty {
+            <p class="location-status">No hay ubicaciones registradas para este Pokémon.</p>
+          }
+        </div>
+        <span class="text-link">Encuentros de PokéAPI <span>→</span></span>
+      </section>
+    </article>
+  } @else if (store.error()) {
+    <div class="detail-loading">{{ store.error() }}</div>
+  }
+</section>

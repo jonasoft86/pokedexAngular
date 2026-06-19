@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "bulbasaur",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+    "types": [
+      { "slot": 1, "type": { "name": "grass", "url": "https://pokeapi.co/api/v2/type/12/" } },
+      { "slot": 2, "type": { "name": "poison", "url": "https://pokeapi.co/api/v2/type/4/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 45, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 49, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 49, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 65, "effort": 1, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 65, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 7,
+    "weight": 69,
+    "abilities": [
+      { "ability": { "name": "overgrow", "url": "https://pokeapi.co/api/v2/ability/65/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "chlorophyll", "url": "https://pokeapi.co/api/v2/ability/34/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "bulbasaur", "url": "https://pokeapi.co/api/v2/pokemon-form/1/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 4,
+    "name": "charmander",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+    "types": [
+      { "slot": 1, "type": { "name": "fire", "url": "https://pokeapi.co/api/v2/type/10/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 39, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 52, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 43, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 60, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 65, "effort": 1, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 6,
+    "weight": 85,
+    "abilities": [
+      { "ability": { "name": "blaze", "url": "https://pokeapi.co/api/v2/ability/66/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "solar-power", "url": "https://pokeapi.co/api/v2/ability/94/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "charmander", "url": "https://pokeapi.co/api/v2/pokemon-form/4/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 7,
+    "name": "squirtle",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+    "types": [
+      { "slot": 1, "type": { "name": "water", "url": "https://pokeapi.co/api/v2/type/11/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 44, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 48, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 65, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 64, "effort": 1, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 43, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 5,
+    "weight": 90,
+    "abilities": [
+      { "ability": { "name": "torrent", "url": "https://pokeapi.co/api/v2/ability/67/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "rain-dish", "url": "https://pokeapi.co/api/v2/ability/44/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "squirtle", "url": "https://pokeapi.co/api/v2/pokemon-form/7/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 25,
+    "name": "pikachu",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    "types": [
+      { "slot": 1, "type": { "name": "electric", "url": "https://pokeapi.co/api/v2/type/13/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 35, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 40, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 90, "effort": 2, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 4,
+    "weight": 60,
+    "abilities": [
+      { "ability": { "name": "static", "url": "https://pokeapi.co/api/v2/ability/9/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "lightning-rod", "url": "https://pokeapi.co/api/v2/ability/31/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "pikachu", "url": "https://pokeapi.co/api/v2/pokemon-form/25/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 39,
+    "name": "jigglypuff",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+    "types": [
+      { "slot": 1, "type": { "name": "normal", "url": "https://pokeapi.co/api/v2/type/1/" } },
+      { "slot": 2, "type": { "name": "fairy", "url": "https://pokeapi.co/api/v2/type/18/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/39.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 115, "effort": 2, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 20, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 25, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 20, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 5,
+    "weight": 55,
+    "abilities": [
+      { "ability": { "name": "cute-charm", "url": "https://pokeapi.co/api/v2/ability/56/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "competitive", "url": "https://pokeapi.co/api/v2/ability/95/" }, "is_hidden": false, "slot": 2 },
+      { "ability": { "name": "friend-guard", "url": "https://pokeapi.co/api/v2/ability/132/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "jigglypuff", "url": "https://pokeapi.co/api/v2/pokemon-form/39/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 52,
+    "name": "meowth",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+    "types": [
+      { "slot": 1, "type": { "name": "normal", "url": "https://pokeapi.co/api/v2/type/1/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/52.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 40, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 35, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 40, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 40, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 90, "effort": 2, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 4,
+    "weight": 42,
+    "abilities": [
+      { "ability": { "name": "pickup", "url": "https://pokeapi.co/api/v2/ability/53/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "technician", "url": "https://pokeapi.co/api/v2/ability/34/" }, "is_hidden": false, "slot": 2 },
+      { "ability": { "name": "unnerve", "url": "https://pokeapi.co/api/v2/ability/127/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "meowth", "url": "https://pokeapi.co/api/v2/pokemon-form/52/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 54,
+    "name": "psyduck",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+    "types": [
+      { "slot": 1, "type": { "name": "water", "url": "https://pokeapi.co/api/v2/type/11/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 50, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 52, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 48, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 65, "effort": 1, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 8,
+    "weight": 196,
+    "abilities": [
+      { "ability": { "name": "damp", "url": "https://pokeapi.co/api/v2/ability/6/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "cloud-nine", "url": "https://pokeapi.co/api/v2/ability/14/" }, "is_hidden": false, "slot": 2 },
+      { "ability": { "name": "swift-swim", "url": "https://pokeapi.co/api/v2/ability/33/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "psyduck", "url": "https://pokeapi.co/api/v2/pokemon-form/54/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 43,
+    "name": "oddish",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+    "types": [
+      { "slot": 1, "type": { "name": "grass", "url": "https://pokeapi.co/api/v2/type/12/" } },
+      { "slot": 2, "type": { "name": "poison", "url": "https://pokeapi.co/api/v2/type/4/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/43.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 45, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 75, "effort": 1, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 65, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 30, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 5,
+    "weight": 54,
+    "abilities": [
+      { "ability": { "name": "chlorophyll", "url": "https://pokeapi.co/api/v2/ability/34/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "run-away", "url": "https://pokeapi.co/api/v2/ability/50/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "oddish", "url": "https://pokeapi.co/api/v2/pokemon-form/43/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 50,
+    "name": "diglett",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+    "types": [
+      { "slot": 1, "type": { "name": "ground", "url": "https://pokeapi.co/api/v2/type/5/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/50.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 10, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 25, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 35, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 95, "effort": 2, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 2,
+    "weight": 8,
+    "abilities": [
+      { "ability": { "name": "sand-veil", "url": "https://pokeapi.co/api/v2/ability/8/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "arena-trap", "url": "https://pokeapi.co/api/v2/ability/51/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "diglett", "url": "https://pokeapi.co/api/v2/pokemon-form/50/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 69,
+    "name": "bellsprout",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+    "types": [
+      { "slot": 1, "type": { "name": "grass", "url": "https://pokeapi.co/api/v2/type/12/" } },
+      { "slot": 2, "type": { "name": "poison", "url": "https://pokeapi.co/api/v2/type/4/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/69.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 50, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 75, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 35, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 70, "effort": 1, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 30, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 40, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 7,
+    "weight": 19,
+    "abilities": [
+      { "ability": { "name": "chlorophyll", "url": "https://pokeapi.co/api/v2/ability/34/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "gluttony", "url": "https://pokeapi.co/api/v2/ability/82/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "bellsprout", "url": "https://pokeapi.co/api/v2/pokemon-form/69/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 129,
+    "name": "magikarp",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+    "types": [
+      { "slot": 1, "type": { "name": "water", "url": "https://pokeapi.co/api/v2/type/11/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/129.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 20, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 10, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 15, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 20, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 80, "effort": 1, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 9,
+    "weight": 100,
+    "abilities": [
+      { "ability": { "name": "swift-swim", "url": "https://pokeapi.co/api/v2/ability/33/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "rattled", "url": "https://pokeapi.co/api/v2/ability/135/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "magikarp", "url": "https://pokeapi.co/api/v2/pokemon-form/129/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 133,
+    "name": "eevee",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+    "types": [
+      { "slot": 1, "type": { "name": "normal", "url": "https://pokeapi.co/api/v2/type/1/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/133.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 55, "effort": 0, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 50, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 45, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 65, "effort": 1, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 55, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 3,
+    "weight": 65,
+    "abilities": [
+      { "ability": { "name": "run-away", "url": "https://pokeapi.co/api/v2/ability/50/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "adaptability", "url": "https://pokeapi.co/api/v2/ability/91/" }, "is_hidden": false, "slot": 2 },
+      { "ability": { "name": "anticipation", "url": "https://pokeapi.co/api/v2/ability/107/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "eevee", "url": "https://pokeapi.co/api/v2/pokemon-form/133/" }
+    ],
+    "moves": []
+  },
+  {
+    "id": 143,
+    "name": "snorlax",
+    "frontSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+    "types": [
+      { "slot": 1, "type": { "name": "normal", "url": "https://pokeapi.co/api/v2/type/1/" } }
+    ],
+    "sprites": {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
+      "other": {
+        "official-artwork": {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png"
+        }
+      }
+    },
+    "stats": [
+      { "base_stat": 160, "effort": 2, "stat": { "name": "hp", "url": "https://pokeapi.co/api/v2/stat/1/" } },
+      { "base_stat": 110, "effort": 0, "stat": { "name": "attack", "url": "https://pokeapi.co/api/v2/stat/2/" } },
+      { "base_stat": 65, "effort": 0, "stat": { "name": "defense", "url": "https://pokeapi.co/api/v2/stat/3/" } },
+      { "base_stat": 65, "effort": 0, "stat": { "name": "special-attack", "url": "https://pokeapi.co/api/v2/stat/4/" } },
+      { "base_stat": 110, "effort": 0, "stat": { "name": "special-defense", "url": "https://pokeapi.co/api/v2/stat/5/" } },
+      { "base_stat": 30, "effort": 0, "stat": { "name": "speed", "url": "https://pokeapi.co/api/v2/stat/6/" } }
+    ],
+    "height": 21,
+    "weight": 460,
+    "abilities": [
+      { "ability": { "name": "immunity", "url": "https://pokeapi.co/api/v2/ability/17/" }, "is_hidden": false, "slot": 1 },
+      { "ability": { "name": "thick-fat", "url": "https://pokeapi.co/api/v2/ability/47/" }, "is_hidden": true, "slot": 3 }
+    ],
+    "forms": [
+      { "name": "snorlax", "url": "https://pokeapi.co/api/v2/pokemon-form/143/" }
+    ],
+    "moves": []
+  }
+]

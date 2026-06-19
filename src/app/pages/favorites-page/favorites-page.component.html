@@ -1,0 +1,74 @@
+<main class="likes-page">
+  <header class="likes-header">
+    <a class="back-link" routerLink="/">← <span>Volver a la Pokédex</span></a>
+
+    <div class="likes-title">
+      <span aria-hidden="true">♥</span>
+      <div>
+        <p>Tu colección</p>
+        <h1>Pokémon favoritos</h1>
+      </div>
+    </div>
+
+    <div class="likes-count">
+      <strong>{{ store.favoriteCount() }}</strong>
+      <span>Pokémon guardados</span>
+    </div>
+  </header>
+
+  <section class="likes-content">
+    @if (store.loadingFavorites()) {
+      <div class="empty-likes">
+        <span class="loader"></span>
+        <h2>Cargando tus favoritos...</h2>
+      </div>
+    } @else if (store.favoriteDetails().length) {
+      <div class="liked-grid">
+        @for (detail of store.favoriteDetails(); track detail.pokemon.id) {
+          <article class="liked-card">
+            <span class="card-number">{{ pokemonNumber(detail.pokemon.id) }}</span>
+            <button
+              class="remove-like"
+              type="button"
+              aria-label="Quitar de favoritos"
+              (click)="store.removeFavorite(detail.pokemon.id)"
+            >♥</button>
+
+            <div
+              class="liked-artwork"
+              [class]="'liked-artwork halo-' + detail.pokemon.types[0].type.name"
+            >
+              <span></span>
+              <img [src]="artwork(detail.pokemon)" [alt]="capitalize(detail.pokemon.name)">
+            </div>
+
+            <h2>{{ capitalize(detail.pokemon.name) }}</h2>
+            <div class="liked-types">
+              @for (item of detail.pokemon.types; track item.slot) {
+                <span [class]="'type-' + item.type.name">{{ typeName(item.type.name) }}</span>
+              }
+            </div>
+
+            <div class="liked-stats">
+              <div>
+                <span>Habilidad</span>
+                <strong>{{ ability(detail.pokemon) }}</strong>
+              </div>
+              <div>
+                <span>Peso</span>
+                <strong>{{ (detail.pokemon.weight / 10).toFixed(1) }} kg</strong>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    } @else {
+      <div class="empty-likes">
+        <span aria-hidden="true">♡</span>
+        <h2>Aún no guardaste Pokémon</h2>
+        <p>Presiona el corazón de cualquier ficha para añadirlo a esta lista.</p>
+        <a routerLink="/">Explorar la Pokédex</a>
+      </div>
+    }
+  </section>
+</main>

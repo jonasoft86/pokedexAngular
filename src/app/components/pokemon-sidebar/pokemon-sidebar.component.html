@@ -1,0 +1,97 @@
+<aside class="pokemon-sidebar">
+  <div class="sidebar-summary">
+    <div><span>Total</span><strong>{{ store.total() }}</strong></div>
+    <div><span>Vistos</span><strong>{{ store.viewedCount() }}</strong></div>
+  </div>
+
+  <div class="filters">
+    <label>
+      <select aria-label="Filtrar por tipo" [value]="store.type()" (change)="onTypeChange($event)">
+        <option value="all">Todos los tipos</option>
+        <option value="normal">Normal</option>
+        <option value="fire">Fuego</option>
+        <option value="water">Agua</option>
+        <option value="electric">Eléctrico</option>
+        <option value="grass">Planta</option>
+        <option value="ice">Hielo</option>
+        <option value="fighting">Lucha</option>
+        <option value="poison">Veneno</option>
+        <option value="ground">Tierra</option>
+        <option value="flying">Volador</option>
+        <option value="psychic">Psíquico</option>
+        <option value="bug">Bicho</option>
+        <option value="rock">Roca</option>
+        <option value="ghost">Fantasma</option>
+        <option value="dragon">Dragón</option>
+        <option value="dark">Siniestro</option>
+        <option value="steel">Acero</option>
+        <option value="fairy">Hada</option>
+      </select>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m7 9.5 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </label>
+
+    <label>
+      <select aria-label="Ordenar Pokémon" [value]="store.sort()" (change)="onSortChange($event)">
+        <option value="number-asc">Orden: Número (Asc)</option>
+        <option value="number-desc">Orden: Número (Desc)</option>
+        <option value="name-asc">Orden: Nombre (A-Z)</option>
+        <option value="name-desc">Orden: Nombre (Z-A)</option>
+      </select>
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m7 9.5 5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </label>
+  </div>
+
+  <div class="pokemon-list">
+    @if (store.loadingCatalog()) {
+      <div class="state-message"><span class="loader"></span>Cargando Pokémon...</div>
+    } @else {
+      @for (pokemon of store.pageItems(); track pokemon.id) {
+        <button
+          class="pokemon-list-item"
+          [class.active]="pokemon.id === store.selectedId()"
+          type="button"
+          (click)="store.selectPokemon(pokemon.id)"
+        >
+          <span class="list-image"><img [src]="pokemon.sprite" alt="" loading="lazy"></span>
+          <span class="list-copy">
+            <small>{{ pokemonNumber(pokemon.id) }}</small>
+            <strong>{{ capitalize(pokemon.name) }}</strong>
+          </span>
+        </button>
+      } @empty {
+        <p class="empty-result">No encontramos ningún Pokémon.</p>
+      }
+    }
+  </div>
+
+  <nav class="pagination" aria-label="Paginación">
+    <button
+      type="button"
+      [disabled]="store.currentPage() === 1"
+      aria-label="Página anterior"
+      (click)="store.setPage(store.currentPage() - 1)"
+    >‹</button>
+    @for (page of store.pages(); track $index) {
+      @if (page === 'ellipsis') {
+        <span class="pagination-ellipsis" aria-hidden="true">…</span>
+      } @else {
+        <button
+          type="button"
+          [class.active]="page === store.currentPage()"
+          [attr.aria-label]="'Ir a la página ' + page"
+          (click)="store.setPage(page)"
+        >{{ page }}</button>
+      }
+    }
+    <button
+      type="button"
+      [disabled]="store.currentPage() === store.pageCount()"
+      aria-label="Página siguiente"
+      (click)="store.setPage(store.currentPage() + 1)"
+    >›</button>
+  </nav>
+</aside>
