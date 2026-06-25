@@ -63,6 +63,12 @@
           </span>
         </button>
       } @empty {
+        <div class="empty-result">
+          <span class="empty-icon">?</span>
+          <strong>No encontramos coincidencias</strong>
+          <p>Prueba otro nombre, numero o reinicia los filtros activos.</p>
+          <button type="button" (click)="store.clearFilters()">Limpiar busqueda</button>
+        </div>
         <p class="empty-result">No encontramos ningún Pokémon.</p>
       }
     }

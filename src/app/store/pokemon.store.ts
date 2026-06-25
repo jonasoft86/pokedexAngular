@@ -66,7 +66,7 @@ export const PokemonStore = signalStore(
       const typeIds = new Set(store.typeIds());
       const list = store.catalog().filter((pokemon) => {
         const matchesSearch = pokemon.name.includes(query) || pokemon.id.toString().includes(query);
-        const matchesType = store.type() === 'all' || typeIds.has(pokemon.id);
+        const matchesType = query || store.type() === 'all' || typeIds.has(pokemon.id);
         return matchesSearch && matchesType;
       });
 
@@ -110,6 +110,20 @@ export const PokemonStore = signalStore(
       favoriteCount: computed(() => store.favorites().length),
       viewedCount: computed(() => store.viewed().length),
       isFavorite: computed(() => store.favorites().includes(store.selectedId())),
+      searchSuggestions: computed(() => {
+        const query = store.search().trim().toLocaleLowerCase('es');
+        if (!query) return [];
+
+        return store.catalog()
+          .filter((pokemon) => pokemon.name.includes(query) || pokemon.id.toString().includes(query))
+          .sort((a, b) => {
+            const aStarts = a.name.startsWith(query) || a.id.toString().startsWith(query);
+            const bStarts = b.name.startsWith(query) || b.id.toString().startsWith(query);
+            if (aStarts !== bStarts) return aStarts ? -1 : 1;
+            return a.id - b.id;
+          })
+          .slice(0, 6);
+      }),
     };
   }),
   withMethods((store, api = inject(PokeApiService)) => ({
@@ -158,6 +172,12 @@ export const PokemonStore = signalStore(
     ),
     setSearch(search: string): void {
       patchState(store, { search, page: 1 });
+    },
+    clearSearch(): void {
+      patchState(store, { search: '', page: 1 });
+    },
+    clearFilters(): void {
+      patchState(store, { search: '', type: 'all', typeIds: [], page: 1 });
     },
     setSort(sort: SortOrder): void {
       patchState(store, { sort, page: 1 });

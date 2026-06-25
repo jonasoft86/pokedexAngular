@@ -4,20 +4,47 @@
     <span>POKÉDEX</span>
   </div>
 
-  <label class="search-box">
+  <div class="search-box">
     <input
       type="search"
       placeholder="Buscar Pokémon..."
       aria-label="Buscar Pokémon"
       autocomplete="off"
+      role="combobox"
+      aria-autocomplete="list"
+      [attr.aria-expanded]="suggestionsOpen() && store.searchSuggestions().length > 0"
+      aria-controls="search-suggestions"
       [value]="store.search()"
       (input)="onSearch($event)"
+      (focus)="suggestionsOpen.set(true)"
+      (blur)="suggestionsOpen.set(false)"
+      (keydown)="onSearchKeydown($event)"
     >
+    @if (store.search()) {
+      <button class="clear-search" type="button" aria-label="Limpiar busqueda" (click)="clearSearch()"></button>
+    }
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
       <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="2" />
       <path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
     </svg>
-  </label>
+    @if (suggestionsOpen() && store.searchSuggestions().length > 0) {
+      <div class="search-suggestions" id="search-suggestions" role="listbox">
+        @for (pokemon of store.searchSuggestions(); track pokemon.id) {
+          <button
+            type="button"
+            role="option"
+            (pointerdown)="$event.preventDefault(); selectSuggestion(pokemon)"
+          >
+            <span class="suggestion-image"><img [src]="pokemon.sprite" alt="" loading="lazy"></span>
+            <span>
+              <small>{{ pokemonNumber(pokemon.id) }}</small>
+              <strong>{{ capitalize(pokemon.name) }}</strong>
+            </span>
+          </button>
+        }
+      </div>
+    }
+  </div>
 
   <div class="theme-control">
     <a class="likes-link" routerLink="/favoritos">
